@@ -33,9 +33,32 @@ Plug 'cjuniet/clang-format.vim'
 
 Plug 'vim-syntastic/syntastic'
 Plug 'alexandregv/norminette-vim'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 call plug#end()
 
 set noexpandtab
+
+let g:syntastic_python_checkers = ['python']
+
+set hlsearch
+"noremap <F4> :set hlsearch! hlsearch?<CR> 
+noremap <CR> :nohlsearch<CR>
+
+
+filetype plugin on
+"Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_mermaid = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
+"let g:instant_markdown_theme = 'dark'
 
 " Enable norminette-vim (and gcc)
 let g:syntastic_c_checkers = ['norminette', 'gcc']
@@ -90,7 +113,7 @@ let g:coc_global_extensions = [
   \ ]
 
 " load default colorscheme
-colorscheme codedark
+colorscheme gruvbox
 
 inoremap kj <ESC>
 
@@ -122,6 +145,10 @@ let g:user_emmet_leader_key='<C-Z>'
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+
+autocmd BufNew,BufRead *.asm set ft=nasm
+autocmd BufNew,BufRead *.s set ft=nasm
 
 
 " Remap keys for applying codeAction to the current line.
