@@ -115,7 +115,8 @@ let g:coc_global_extensions = [
 " load default colorscheme
 colorscheme gruvbox
 
-inoremap kj <ESC>
+" too soy for me right now
+" inoremap kj <ESC>
 
 nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
