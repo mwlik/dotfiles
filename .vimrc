@@ -34,6 +34,8 @@ Plug 'cjuniet/clang-format.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'alexandregv/norminette-vim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set noexpandtab
@@ -228,5 +230,10 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+set mouse=a
+
+let NERDTreeShowHidden=1
+
 
 set noexpandtab
