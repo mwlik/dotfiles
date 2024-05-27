@@ -113,7 +113,7 @@ let g:coc_global_extensions = [
   \ ]
 
 " load default colorscheme
-colorscheme gruvbox
+colorscheme codedark
 
 " too soy for me right now
 " inoremap kj <ESC>
