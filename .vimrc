@@ -34,11 +34,13 @@ Plug 'cjuniet/clang-format.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'alexandregv/norminette-vim'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set noexpandtab
 
-let g:syntastic_python_checkers = ['python']
+"let g:syntastic_python_checkers = ['python']
 
 set hlsearch
 "noremap <F4> :set hlsearch! hlsearch?<CR> 
@@ -113,9 +115,11 @@ let g:coc_global_extensions = [
   \ ]
 
 " load default colorscheme
+colorscheme codedark
 colorscheme gruvbox
 
-inoremap kj <ESC>
+" too soy for me righnow
+" inoremap kj <ESC>
 
 nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
@@ -230,3 +234,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 set noexpandtab
+
+set mouse=a
+
+set relativenumber
